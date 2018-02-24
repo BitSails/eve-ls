@@ -6,6 +6,8 @@ class Node // This self-referential class stores integer data
 
 };
 
+Node* frontPtr=nullptr;//initialize linked-list to be empty
+
 
 //inserting to the front
 //step 1
