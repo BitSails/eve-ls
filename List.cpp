@@ -1,8 +1,8 @@
 class Node // This self-referential class stores integer data
 {
  public:        //This data won't be public 
-    int data;
-    Node* link; //this attribute makes it a self-referential class
+    int data = 0;
+    Node* link = nullptr; //this attribute makes it a self-referential class
 
 };
 
