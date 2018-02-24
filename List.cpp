@@ -6,6 +6,16 @@ class Node // This self-referential class stores integer data
 
 };
 
+/*
+ * For trivial classes such as above, compiler 
+ * will write the following c'tors for us
+ * 
+ * Node()
+ * Node(int)
+ * Node(int, Node*)
+ */ 
+
+
 Node* frontPtr=nullptr;//initialize linked-list to be empty
 
 
