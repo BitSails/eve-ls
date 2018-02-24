@@ -56,4 +56,51 @@ iPtr->link = newPtr;
 }
 
 
+}//end insert
+
+
+
+
+
+
+
+
+
+remove(int k){
+if (k ==1)
+{
+//step 1
+  Node* delPtr = frontPtr;
+
+//step 2
+  frontPtr = frontPtr->link; 
+
+//step 3
+delete delPtr;
+return;
 }
+else
+ {
+    
+ Node* iPtr=nullptr;
+int i = 1;
+
+//step 4 (get a pointer to the (k-1)th node
+for ( iPtr= frontPtr; i < k-1; i++)
+ {
+ iPtr = iPtr->link;   
+  } 
+
+//step 5
+Node* delPtr = iPtr->link;
+
+//step 6
+iPtr->link = delPtr->link;
+
+//step 7
+delete delPtr;
+
+}
+
+}//end delete
+
