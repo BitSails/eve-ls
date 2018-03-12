@@ -1,4 +1,6 @@
-class Node // This self-referential class stores integer data
+#include "List.h"
+
+class List::Node // This self-referential class stores integer data
 {
  public:        //This data won't be public 
     int data = 0;
@@ -16,11 +18,10 @@ class Node // This self-referential class stores integer data
  */ 
 
 
-Node* frontPtr=nullptr;//initialize linked-list to be empty
 
-//.val is the data to insert
+// val is the data to insert
 // k is the position to insert at
-insert(int val, int k)
+void List::insert(int val, int k)
 {
 //inserting to the front
 //step 1
@@ -66,7 +67,7 @@ iPtr->link = newPtr;
 
 
 
-remove(int k){
+void List::remove(int k){
 if (k ==1)
 {
 //step 1
@@ -103,4 +104,27 @@ delete delPtr;
 }
 
 }//end delete
+
+
+
+int get(int k)
+{
+   //left as an exercise
+}
+
+int List::size()
+{
+  return num_elements;
+}
+
+void List::clear()
+{
+   //left as an exercise
+}
+
+
+List::~List()
+{
+  clear();
+}
 
